@@ -121,6 +121,7 @@ export interface ProjectItem {
   description: string;
   tags: string[];
   icon: LucideIcon;
+  image?: string;
   github?: string;
   live?: string;
 }
@@ -131,7 +132,8 @@ export const PROJECTS: ProjectItem[] = [
   description:
     'A production-style, full-stack ecommerce platform with an integrated admin dashboard, dynamic catalog management, and seamless Stripe payment integration.',
   tags: ['React', 'TypeScript', 'ASP.NET Core', 'EF Core', 'SQL Server', 'Tailwind CSS'],
-  icon: ShoppingBag
+  icon: ShoppingBag,
+  image: '/images/lumina.webp'
 },
   {
     title: 'UAF CGPA Calculator',

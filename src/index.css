@@ -1034,7 +1034,7 @@ h1, h2, h3 {
     max-width: 560px;
 }
 
-/* Decorative panel — echoes the hero's gradient frame; no image assets involved. */
+/* Featured card visual: a project screenshot if provided, else a decorative icon panel echoing the hero's gradient frame. */
 .project-card__visual {
     display: flex;
     align-items: center;
@@ -1042,10 +1042,21 @@ h1, h2, h3 {
     aspect-ratio: 16 / 10;
     border-radius: var(--radius-md);
     border: 1px solid var(--border);
+    overflow: hidden;
     background:
         radial-gradient(circle at 30% 25%, rgba(168, 85, 247, 0.28), transparent 65%),
         radial-gradient(circle at 75% 80%, rgba(34, 211, 238, 0.22), transparent 65%),
         var(--surface);
+}
+
+.project-card__visual--image {
+    background: var(--surface);
+}
+
+.project-card__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .project-card__visual svg {

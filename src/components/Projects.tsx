@@ -61,11 +61,16 @@ export function Projects() {
                 </div>
               </div>
 
-              {featured && (
-                <div className="project-card__visual" aria-hidden="true">
-                  <project.icon size={72} strokeWidth={1.2} />
-                </div>
-              )}
+              {featured &&
+                (project.image ? (
+                  <div className="project-card__visual project-card__visual--image">
+                    <img src={project.image} alt="" />
+                  </div>
+                ) : (
+                  <div className="project-card__visual" aria-hidden="true">
+                    <project.icon size={72} strokeWidth={1.2} />
+                  </div>
+                ))}
             </motion.div>
           );
         })}
