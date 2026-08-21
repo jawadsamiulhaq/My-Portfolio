@@ -113,7 +113,7 @@ export function Hero() {
         >
           <div className="profile-frame">
             <div className="profile-circle">
-              <img src="/images/Profile.png" alt={PROFILE.name} />
+              <img src="/images/profile.webp" alt={PROFILE.name} width={280} height={280} decoding="async" fetchPriority="high" />
             </div>
           </div>
         </motion.div>
