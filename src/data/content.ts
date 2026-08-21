@@ -23,9 +23,9 @@ import {
   HardDrive,
   Hash,
 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from '../components/icons/BrandIcons';
+import { GithubIcon, LinkedinIcon} from '../components/icons/BrandIcons';
 
-type IconComponent = LucideIcon | typeof GithubIcon;
+type IconComponent = LucideIcon | typeof GithubIcon | typeof LinkedinIcon;
 
 export const NAV_LINKS = [
   { id: 'hero', label: 'Home' },
