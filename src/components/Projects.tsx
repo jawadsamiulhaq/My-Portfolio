@@ -1,9 +1,22 @@
-import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ExternalLink, X } from 'lucide-react';
 import { PROJECTS } from '../data/content';
 import { GithubIcon } from './icons/BrandIcons';
 
 export function Projects() {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') setLightbox(null);
+    }
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [lightbox]);
+
   return (
     <section id="projects" className="projects-section">
       <div className="section-glow projects-glow" aria-hidden="true" />
@@ -63,9 +76,14 @@ export function Projects() {
 
               {featured &&
                 (project.image ? (
-                  <div className="project-card__visual project-card__visual--image">
+                  <button
+                    type="button"
+                    className="project-card__visual project-card__visual--image"
+                    onClick={() => setLightbox({ src: project.image!, alt: `${project.title} screenshot` })}
+                    aria-label={`View full screenshot of ${project.title}`}
+                  >
                     <img src={project.image} alt="" />
-                  </div>
+                  </button>
                 ) : (
                   <div className="project-card__visual" aria-hidden="true">
                     <project.icon size={72} strokeWidth={1.2} />
@@ -75,6 +93,37 @@ export function Projects() {
           );
         })}
       </div>
+
+      {createPortal(
+        <AnimatePresence>
+          {lightbox && (
+            <motion.div
+              className="lightbox-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setLightbox(null)}
+            >
+              <motion.img
+                key={lightbox.src}
+                src={lightbox.src}
+                alt={lightbox.alt}
+                className="lightbox-image"
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.2 }}
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button type="button" className="lightbox-close" onClick={() => setLightbox(null)} aria-label="Close">
+                <X size={22} />
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body,
+      )}
     </section>
   );
 }
