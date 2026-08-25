@@ -60,7 +60,7 @@ export interface StatItem {
 }
 
 export const STATS: StatItem[] = [
-  { icon: FolderGit2, value: 4, suffix: '+', label: 'Projects Completed' },
+  { icon: FolderGit2, value: 10, suffix: '+', label: 'Projects Completed' },
   { icon: Code2, value: 11, suffix: '+', label: 'Tech Skills' },
   { icon: LanguagesIcon, value: 2, suffix: '', label: 'Languages Spoken' },
 ];
