@@ -25,39 +25,41 @@ export function About() {
         <h2>Who am I?</h2>
       </motion.div>
 
-      <motion.p
-        className="about-bio"
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-15% 0px' }}
-        transition={{ duration: 0.5, delay: 0.08 }}
-      >
-        {PROFILE.bio}
-      </motion.p>
+      <div className="about-grid">
+        <motion.div
+          className="about-main"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-15% 0px' }}
+          transition={{ duration: 0.5, delay: 0.08 }}
+        >
+          <p className="about-bio">{PROFILE.bio}</p>
+          <a href="#" className="btn-cv">
+            Download CV
+            <ArrowDown size={16} />
+          </a>
+        </motion.div>
 
-      <motion.div
-        className="about-footer"
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-15% 0px' }}
-        transition={{ duration: 0.5, delay: 0.14 }}
-      >
-        <a href="#" className="btn-cv">
-          Download CV
-          <ArrowDown size={16} />
-        </a>
-        <div className="info-row-strip">
+        <motion.div
+          className="about-info-card"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-15% 0px' }}
+          transition={{ duration: 0.5, delay: 0.14 }}
+        >
           {INFO_ROWS.map(({ icon: Icon, label, value, highlight }) => (
-            <div className="info-item" key={label}>
+            <div className="about-info-row" key={label}>
               <span className="info-icon">
                 <Icon size={17} strokeWidth={2} />
               </span>
-              <span className="info-label">{label}</span>
-              <span className={`info-value ${highlight ? 'available' : ''}`}>{value}</span>
+              <span className="about-info-text">
+                <span className="info-label">{label}</span>
+                <span className={`info-value ${highlight ? 'available' : ''}`}>{value}</span>
+              </span>
             </div>
           ))}
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

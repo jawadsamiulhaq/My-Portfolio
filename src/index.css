@@ -643,28 +643,30 @@ h1, h2, h3 {
     background: radial-gradient(circle, rgba(244, 114, 182, 0.16), transparent 70%);
 }
 
-.about-bio {
+.about-grid {
     position: relative;
     z-index: 2;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: var(--space-8);
+    align-items: start;
+    margin-top: var(--space-6);
+}
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-6);
+}
+
+.about-bio {
     font-family: var(--font-display);
-    font-size: clamp(22px, 2.8vw, 30px);
+    font-size: clamp(20px, 2.4vw, 27px);
     font-weight: 500;
     line-height: 1.55;
     color: var(--text-primary);
-    max-width: 900px;
-    margin: 28px 0 44px;
-}
-
-.about-footer {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 28px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border);
+    margin: 0;
 }
 
 .btn-cv {
@@ -689,20 +691,36 @@ h1, h2, h3 {
     transform: translateY(-1px);
 }
 
-.info-row-strip {
+.about-info-card {
     display: flex;
-    flex-wrap: wrap;
-    gap: 24px 32px;
-}
-
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
     background: var(--bg-elevated);
     border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 10px 18px;
+    border-radius: var(--radius-md);
+    padding: var(--space-5) var(--space-6);
+    backdrop-filter: blur(10px);
+    transition: 0.2s var(--ease);
+}
+
+.about-info-card:hover {
+    border-color: var(--border-hover);
+}
+
+.about-info-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: var(--space-3) 0;
+}
+
+.about-info-row:not(:first-child) {
+    border-top: 1px solid var(--border);
+}
+
+.about-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .info-icon {
@@ -713,8 +731,10 @@ h1, h2, h3 {
 
 .info-label {
     color: var(--text-tertiary);
-    font-size: 13px;
+    font-size: 12px;
     font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .info-value {
@@ -1322,9 +1342,8 @@ h1, h2, h3 {
         order: -1;
     }
 
-    .about-footer {
-        flex-direction: column;
-        align-items: flex-start;
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
     .stats-bar {
