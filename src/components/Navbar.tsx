@@ -57,7 +57,11 @@ export function Navbar() {
             >
               {link.label}
               {activeId === link.id && (
-                <motion.span className="nav-link__indicator" layoutId="nav-indicator" />
+                <motion.span
+                  className="nav-link__indicator"
+                  layoutId="nav-indicator"
+                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                />
               )}
             </button>
           ))}
