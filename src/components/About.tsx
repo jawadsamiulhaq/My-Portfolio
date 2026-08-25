@@ -34,10 +34,11 @@ export function About() {
           transition={{ duration: 0.5, delay: 0.08 }}
         >
           <p className="about-bio">{PROFILE.bio}</p>
-          <a href="#" className="btn-cv">
+          <button type="button" className="btn-cv" disabled title="Resume coming soon">
             Download CV
             <ArrowDown size={16} />
-          </a>
+            <span className="btn-cv__badge">Soon</span>
+          </button>
         </motion.div>
 
         <motion.div
