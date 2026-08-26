@@ -12,7 +12,6 @@ import { BackToTop } from './components/BackToTop';
 function App() {
   return (
     <div className="portfolio-page">
-      <div className="noise-overlay" aria-hidden="true" />
       <Navbar />
       <Hero />
       <Stats />

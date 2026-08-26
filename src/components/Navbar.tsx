@@ -40,11 +40,7 @@ export function Navbar() {
             handleNavClick('hero');
           }}
         >
-          <span className="nav-brand__mark">JS</span>
-          <span className="nav-brand__text">
-            <span className="brand-white">Jawad</span>
-            <span className="brand-purple"> Sami</span>
-          </span>
+          JS<span className="nav-brand__dot">.</span>dev
         </a>
 
         <nav className="nav-links" aria-label="Primary">
@@ -69,7 +65,7 @@ export function Navbar() {
 
         <div className="navbar__actions">
           <button type="button" className="btn-nav-cta" onClick={() => handleNavClick('contact')}>
-            Let's talk
+            let's talk
           </button>
           <button
             type="button"

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronDown, MessageCircle } from 'lucide-react';
 import { PROFILE, ROLES, SOCIAL_LINKS } from '../data/content';
 
 function scrollToSection(id: string) {
@@ -38,91 +37,85 @@ function RotatingRole() {
 export function Hero() {
   return (
     <section id="hero" className="hero-section">
-      <div className="hero-glow hero-glow--one" aria-hidden="true" />
-      <div className="hero-glow hero-glow--two" aria-hidden="true" />
-
-      <motion.div
-        className="hero-top"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-      >
-        <span className="hero-eyebrow">Based in {PROFILE.location}</span>
-        <span className="hero-availability">
-          <span className="green-dot" /> Available for work
-        </span>
-      </motion.div>
-
-      <motion.h1
-        className="hero-name"
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut', delay: 0.05 }}
-      >
-        {PROFILE.firstName} <span className="accent-text">{PROFILE.lastName}</span>
-      </motion.h1>
-
-      <div className="hero-lower">
+      <div className="hero-grid">
         <motion.div
-          className="hero-meta"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.15 }}
+          transition={{ duration: 0.55, ease: 'easeOut' }}
         >
+          <span className="hero-eyebrow">{PROFILE.location}</span>
+          <h1 className="hero-name">
+            {PROFILE.firstName} {PROFILE.lastName}
+          </h1>
           <p className="hero-role">
             <RotatingRole />
           </p>
           <p className="hero-desc">
-            I build clean, simple and user-friendly digital products
-            <br />
-            that solve real world problems.
+            Professional experience in C#, ASP.NET Core and SQL Server, with React from personal and
+            freelance work — focused on applications that scale, perform and stay maintainable.
           </p>
           <div className="hero-buttons">
-            <button type="button" className="btn-primary" onClick={() => scrollToSection('projects')}>
-              View My Work <span aria-hidden="true">→</span>
+            <button type="button" className="btn-primary" onClick={() => scrollToSection('contact')}>
+              Get in touch
             </button>
-            <button type="button" className="btn-secondary" onClick={() => scrollToSection('contact')}>
-              Contact Me <MessageCircle size={16} />
+            <button type="button" className="btn-secondary" onClick={() => scrollToSection('projects')}>
+              View projects <span aria-hidden="true">→</span>
             </button>
-          </div>
-          <div className="social-icons">
-            {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target={href.startsWith('mailto:') ? undefined : '_blank'}
-                rel="noreferrer"
-                className="social-icon"
-                title={label}
-              >
-                <Icon size={18} />
-              </a>
-            ))}
           </div>
         </motion.div>
 
         <motion.div
-          className="hero-photo"
-          initial={{ opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
+          className="hero-aside"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: 'easeOut', delay: 0.12 }}
         >
           <div className="profile-frame">
-            <div className="profile-circle">
-              <img src="/images/profile.webp" alt={PROFILE.name} width={240} height={240} decoding="async" fetchPriority="high" />
+            <img
+              src="/images/profile.webp"
+              alt={PROFILE.name}
+              width={320}
+              height={320}
+              decoding="async"
+              fetchPriority="high"
+            />
+          </div>
+
+          <div className="panel hero-facts">
+            <div className="hero-facts__label">quick_facts.json</div>
+            <div className="hero-facts__rows">
+              <div className="hero-facts__row">
+                <span className="hero-facts__key">location</span>
+                <span className="hero-facts__value">{PROFILE.location}</span>
+              </div>
+              <div className="hero-facts__row">
+                <span className="hero-facts__key">status</span>
+                <span className="hero-facts__value available">
+                  <span className="green-dot" /> {PROFILE.freelance.toLowerCase()}
+                </span>
+              </div>
+              <div className="hero-facts__row">
+                <span className="hero-facts__key">focus</span>
+                <span className="hero-facts__value">full-stack</span>
+              </div>
+            </div>
+            <div className="social-icons">
+              {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith('mailto:') ? undefined : '_blank'}
+                  rel="noreferrer"
+                  className="social-icon"
+                  title={label}
+                >
+                  <Icon size={17} />
+                </a>
+              ))}
             </div>
           </div>
         </motion.div>
       </div>
-
-      <button
-        type="button"
-        className="scroll-cue"
-        onClick={() => scrollToSection('about')}
-        aria-label="Scroll to About section"
-      >
-        <ChevronDown size={20} />
-      </button>
     </section>
   );
 }

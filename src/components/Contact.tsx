@@ -6,20 +6,16 @@ const CONTACT_LINKS = CONTACT_ORDER.map((label) => SOCIAL_LINKS.find((s) => s.la
 
 export function Contact() {
   return (
-    <section id="contact" className="contact-section">
-      <div className="section-glow contact-glow" aria-hidden="true" />
+    <section id="contact" className="section">
       <motion.div
+        className="panel contact-card"
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-15% 0px' }}
         transition={{ duration: 0.5 }}
       >
-        <div className="section-tag">GET IN TOUCH</div>
-        <h2 className="contact-heading">
-          Let's work
-          <br />
-          together.
-        </h2>
+        <span className="section-tag">05 // contact</span>
+        <h2 className="contact-heading">Let's build something worth shipping.</h2>
         <p className="section-sub">Have a project, idea, or opportunity? Feel free to reach out.</p>
         <div className="contact-links">
           {CONTACT_LINKS.map(({ label, href, icon: Icon }) => (
@@ -30,8 +26,8 @@ export function Contact() {
               rel="noreferrer"
               className={`contact-btn ${label === 'Email' ? '' : 'outline'}`}
             >
-              <Icon size={17} />
-              {label === 'Email' ? 'Email Me' : label}
+              <Icon size={16} />
+              {label === 'Email' ? 'Email me' : label}
             </a>
           ))}
         </div>

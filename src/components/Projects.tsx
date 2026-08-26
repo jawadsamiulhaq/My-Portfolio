@@ -18,18 +18,16 @@ export function Projects() {
   }, [lightbox]);
 
   return (
-    <section id="projects" className="projects-section">
-      <div className="section-glow projects-glow" aria-hidden="true" />
+    <section id="projects" className="section">
       <motion.div
-        className="projects-head"
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-15% 0px' }}
         transition={{ duration: 0.5 }}
       >
-        <div className="section-tag">MY WORK</div>
-        <h2>Projects</h2>
-        <p className="section-sub">Some selected work and practice projects.</p>
+        <span className="section-tag">04 // projects</span>
+        <h2 className="section-title">Selected work.</h2>
+        <p className="section-sub">Production platforms alongside practice projects built to learn something specific.</p>
       </motion.div>
 
       <div className="projects-grid">
@@ -38,7 +36,7 @@ export function Projects() {
 
           return (
             <motion.div
-              className={featured ? 'project-card project-card--featured' : 'project-card'}
+              className={`panel panel--interactive project-card${featured ? ' project-card--featured' : ''}`}
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -48,13 +46,13 @@ export function Projects() {
               <div className="project-card__body">
                 <span className="project-card__index">{String(i + 1).padStart(2, '0')}</span>
                 <h3>
-                  <project.icon size={featured ? 22 : 18} strokeWidth={1.8} className="project-card__icon" />
+                  <project.icon size={featured ? 20 : 17} strokeWidth={1.8} className="project-card__icon" />
                   {project.title}
                 </h3>
                 <p>{project.description}</p>
                 <div className="project-tags">
                   {project.tags.map((tag) => (
-                    <span className="project-tag" key={tag}>
+                    <span className="chip" key={tag}>
                       {tag}
                     </span>
                   ))}
