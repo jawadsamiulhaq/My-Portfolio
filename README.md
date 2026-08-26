@@ -2,7 +2,7 @@
 
 Personal portfolio site for **Jawad Sami** — Software Engineer. Built with React, TypeScript, and Vite, featuring smooth scroll navigation, animated sections, and a clean, modern UI.
 
-🔗 Live site: _add your deployed URL here_
+🔗 Live site: _[Link](https://jawadsamiulhaq.vercel.app/)_
 
 ## Features
 
