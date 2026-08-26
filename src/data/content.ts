@@ -231,5 +231,5 @@ export const PROFILE = {
   location: 'Punjab, Pakistan',
   freelance: 'Available',
   website: 'https://jawadsamiulhaq.vercel.app/',
-  bio: 'Software engineer working across .NET and React, with foundational skills in HTML, CSS, and JavaScript and growing, hands-on experience in C#, ASP.NET Core, SQL Server, and modern front-end tooling. Increasingly focused on building web applications that meet both functional requirements and quality attributes — scalability, performance, and maintainability.'
+  bio: 'Software engineer with professional experience in .NET — C#, ASP.NET Core, and SQL Server — and React experience from personal and freelance projects, alongside foundational skills in HTML, CSS, and JavaScript. Increasingly focused on building web applications that meet both functional requirements and quality attributes — scalability, performance, and maintainability.'
 };
