@@ -173,7 +173,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     role: 'Software Engineer',
     company: 'Exceleron Communications',
     location: 'Lahore, Pakistan',
-    period: 'Nov 2025 — Present',
+    period: 'Current',
     bullets: [
       'Handling a client portal for field operations management, built on .NET, ASP.NET Core, EF Core, and SQL Server.',
       'Responsible for a site status tracking module — a region-aware approval workflow with bulk Excel/JSON import and dashboard reporting.',
