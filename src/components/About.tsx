@@ -5,7 +5,7 @@ import { PROFILE } from '../data/content';
 const INFO_ROWS = [
   { icon: User, label: 'Name', value: PROFILE.name },
   { icon: Mail, label: 'Email', value: PROFILE.email },
-  { icon: Phone, label: 'Phone', value: PROFILE.phone },
+  // { icon: Phone, label: 'Phone', value: PROFILE.phone },
   { icon: MapPin, label: 'Location', value: PROFILE.location },
   { icon: Briefcase, label: 'Freelance', value: PROFILE.freelance, highlight: true },
 ];
