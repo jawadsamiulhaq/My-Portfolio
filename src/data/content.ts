@@ -170,6 +170,19 @@ export interface ExperienceItem {
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
+    role: 'Software Engineer',
+    company: 'Exceleron Communications',
+    location: 'Lahore, Pakistan',
+    period: 'Nov 2025 — Present',
+    bullets: [
+      'Handling a client portal for field operations management, built on .NET, ASP.NET Core, EF Core, and SQL Server.',
+      'Responsible for a site status tracking module — a region-aware approval workflow with bulk Excel/JSON import and dashboard reporting.',
+      'Manage internal project and task tracking, including a workflow-driven lifecycle with assignment, closure, and deadline-based escalation that rolls up status across related tasks.',
+      'Maintain a support ticketing system, covering ticket lifecycle management, team-based assignment, and bulk data import.',
+      'Handle user authentication and access control, covering token and session-based login, multi-factor authentication, and role-based permissions.',
+    ],
+  },
+  {
     role: 'Web Developer',
     company: 'PPC Evolutions Project',
     location: 'Multan, Pakistan',
