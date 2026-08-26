@@ -188,9 +188,9 @@ export const EXPERIENCE: ExperienceItem[] = [
     location: 'Multan, Pakistan',
     period: 'Aug 2024',
     bullets: [
-      'Delivered a responsive website for a digital marketing agency to support Amazon PPC operations and client engagement.',
-      'Used HTML, CSS and JavaScript to build an interactive, engaging user interface.',
-      'Refined a provided template into a client-specific website, improving visual consistency and usability.',
+      'Delivered a responsive marketing website for an Amazon PPC advertising agency, covering services, process, and case-study pages to support lead generation.',
+      'Built a contact/audit request form as the site\'s primary lead-capture mechanism, along with testimonial and social-proof sections.',
+      'Refined a provided template into a client-specific website using HTML, CSS, and JavaScript, improving visual consistency and usability.',
       'Managed domain deployment with analytics and Google indexing.',
     ],
   },
