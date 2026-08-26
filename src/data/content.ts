@@ -218,5 +218,5 @@ export const PROFILE = {
   location: 'Punjab, Pakistan',
   freelance: 'Available',
   website: 'https://jawadsamiulhaq.vercel.app/',
-  bio: 'Full-stack engineer specialized in the MERN stack, focused on building scalable applications that improve efficiency and user satisfaction. Skilled in HTML, CSS, JavaScript, Node.js and MongoDB, with hands-on React and SQL experience, and a focus on performance optimization and user-centric development.',
+  bio: 'Software engineer working across .NET and React, with foundational skills in HTML, CSS, and JavaScript and growing, hands-on experience in C#, ASP.NET Core, SQL Server, and modern front-end tooling. Focused on building clean, user-centric web applications and continuously leveling up across the stack.'
 };
