@@ -47,7 +47,7 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        <span className="hero-eyebrow">Full Stack Developer — Based in {PROFILE.location}</span>
+        <span className="hero-eyebrow">Based in {PROFILE.location}</span>
         <span className="hero-availability">
           <span className="green-dot" /> Available for work
         </span>
@@ -109,7 +109,7 @@ export function Hero() {
         >
           <div className="profile-frame">
             <div className="profile-circle">
-              <img src="/images/profile.webp" alt={PROFILE.name} width={280} height={280} decoding="async" fetchPriority="high" />
+              <img src="/images/profile.webp" alt={PROFILE.name} width={240} height={240} decoding="async" fetchPriority="high" />
             </div>
           </div>
         </motion.div>
