@@ -47,7 +47,7 @@ export function Experience() {
         </motion.div>
 
         <motion.div
-          className="experience-col"
+          className="experience-col experience-col--sticky"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10% 0px' }}

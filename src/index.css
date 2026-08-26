@@ -872,10 +872,15 @@ h1, h2, h3 {
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr;
     gap: 40px;
     margin-top: var(--space-6);
     align-items: start;
+}
+
+.experience-col--sticky {
+    position: sticky;
+    top: 96px;
 }
 
 .experience-col__title {
@@ -1355,6 +1360,11 @@ h1, h2, h3 {
     .experience-grid {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+
+    .experience-col--sticky {
+        position: static;
+        top: auto;
     }
 
     .projects-grid {

@@ -183,8 +183,8 @@ export const EXPERIENCE: ExperienceItem[] = [
     ],
   },
   {
-    role: 'Web Developer',
-    company: 'PPC Evolutions Project',
+    role: 'Freelance Web Developer',
+    company: 'PPC Evolutions (Direct Client)',
     location: 'Multan, Pakistan',
     period: 'Aug 2024',
     bullets: [
