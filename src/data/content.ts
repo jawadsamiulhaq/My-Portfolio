@@ -214,7 +214,7 @@ export const PROFILE = {
   firstName: 'Jawad',
   lastName: 'Sami Ul Haq',
   email: 'jawad786sami@gmail.com',
-  phone: 'Impressive Thinking xD',
+  phone: 'Not Available',
   location: 'Punjab, Pakistan',
   freelance: 'Available',
   website: 'https://jawadsamiulhaq.vercel.app/',
