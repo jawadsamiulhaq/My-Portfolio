@@ -11,7 +11,6 @@ export function Experience() {
         viewport={{ once: true, margin: '-15% 0px' }}
         transition={{ duration: 0.5 }}
       >
-        <span className="section-tag">03 // experience</span>
         <h2 className="section-title">Where I've been building.</h2>
       </motion.div>
 

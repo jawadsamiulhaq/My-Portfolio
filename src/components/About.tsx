@@ -19,7 +19,6 @@ export function About() {
           viewport={{ once: true, margin: '-15% 0px' }}
           transition={{ duration: 0.5 }}
         >
-          <span className="section-tag">01 // about</span>
           <h2 className="section-title">A little about my approach.</h2>
           <p className="about-bio">{PROFILE.bio}</p>
           <button type="button" className="btn-cv" disabled title="Resume coming soon">

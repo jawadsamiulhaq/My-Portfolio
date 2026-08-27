@@ -3,7 +3,7 @@ export function Footer() {
   return (
     <footer className="footer">
       <p>© {year} Jawad Sami Ul Haq</p>
-      <p>built with react &amp; typescript</p>
+      {/* <p>built with react &amp; typescript</p>  */}
     </footer>
   );
 }

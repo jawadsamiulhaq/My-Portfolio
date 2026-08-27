@@ -10,7 +10,6 @@ export function Skills() {
         viewport={{ once: true, margin: '-15% 0px' }}
         transition={{ duration: 0.5 }}
       >
-        <span className="section-tag">02 // skills</span>
         <h2 className="section-title">The stack I work in.</h2>
         <p className="section-sub">Day to day across .NET services, React front-ends and the data layer beneath them.</p>
       </motion.div>

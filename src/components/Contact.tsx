@@ -14,7 +14,6 @@ export function Contact() {
         viewport={{ once: true, margin: '-15% 0px' }}
         transition={{ duration: 0.5 }}
       >
-        <span className="section-tag">05 // contact</span>
         <h2 className="contact-heading">Let's build something worth shipping.</h2>
         <p className="section-sub">Have a project, idea, or opportunity? Feel free to reach out.</p>
         <div className="contact-links">
