@@ -25,7 +25,6 @@ export function Projects() {
         viewport={{ once: true, margin: '-15% 0px' }}
         transition={{ duration: 0.5 }}
       >
-        <span className="section-tag">04 // projects</span>
         <h2 className="section-title">Selected work.</h2>
         <p className="section-sub">Production platforms alongside practice projects built to learn something specific.</p>
       </motion.div>
