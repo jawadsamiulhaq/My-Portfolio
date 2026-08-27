@@ -584,7 +584,6 @@ h1, h2, h3 {
 }
 
 .about-info-card {
-    margin-top: var(--space-6);
     padding: var(--space-5) var(--space-6);
 }
 

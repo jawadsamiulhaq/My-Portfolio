@@ -21,7 +21,20 @@ export function About() {
         >
           <span className="section-tag">01 // about</span>
           <h2 className="section-title">A little about my approach.</h2>
+          <p className="about-bio">{PROFILE.bio}</p>
+          <button type="button" className="btn-cv" disabled title="Resume coming soon">
+            Download CV
+            <ArrowDown size={15} />
+            <span className="btn-cv__badge">Soon</span>
+          </button>
+        </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-15% 0px' }}
+          transition={{ duration: 0.5, delay: 0.08 }}
+        >
           <div className="panel about-info-card">
             {INFO_ROWS.map(({ icon: Icon, label, value, highlight }) => (
               <div className="about-info-row" key={label}>
@@ -35,20 +48,6 @@ export function About() {
               </div>
             ))}
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-15% 0px' }}
-          transition={{ duration: 0.5, delay: 0.08 }}
-        >
-          <p className="about-bio">{PROFILE.bio}</p>
-          <button type="button" className="btn-cv" disabled title="Resume coming soon">
-            Download CV
-            <ArrowDown size={15} />
-            <span className="btn-cv__badge">Soon</span>
-          </button>
         </motion.div>
       </div>
     </section>
