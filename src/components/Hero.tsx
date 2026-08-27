@@ -82,14 +82,13 @@ export function Hero() {
           </div>
 
           <div className="panel hero-facts">
-            <div className="hero-facts__label">quick_facts.json</div>
             <div className="hero-facts__rows">
               <div className="hero-facts__row">
-                <span className="hero-facts__key">location</span>
+                <span className="hero-facts__key">Location</span>
                 <span className="hero-facts__value">{PROFILE.location}</span>
               </div>
               <div className="hero-facts__row">
-                <span className="hero-facts__key">status</span>
+                <span className="hero-facts__key">Status</span>
                 <span className="hero-facts__value available">
                   <span className="green-dot" /> {PROFILE.freelance.toLowerCase()}
                 </span>
