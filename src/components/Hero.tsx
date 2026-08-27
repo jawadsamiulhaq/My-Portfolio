@@ -90,7 +90,7 @@ export function Hero() {
               <div className="hero-facts__row">
                 <span className="hero-facts__key">Status</span>
                 <span className="hero-facts__value available">
-                  <span className="green-dot" /> {PROFILE.freelance.toLowerCase()}
+                  <span className="green-dot" /> {PROFILE.freelance}
                 </span>
               </div>
               <div className="hero-facts__row">
