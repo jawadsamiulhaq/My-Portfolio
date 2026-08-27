@@ -95,8 +95,8 @@ export function Hero() {
                 </span>
               </div>
               <div className="hero-facts__row">
-                <span className="hero-facts__key">focus</span>
-                <span className="hero-facts__value">full-stack</span>
+                <span className="hero-facts__key">Focus</span>
+                <span className="hero-facts__value">Software Engineer</span>
               </div>
             </div>
             <div className="social-icons">
