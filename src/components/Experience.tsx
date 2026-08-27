@@ -23,7 +23,7 @@ export function Experience() {
           transition={{ duration: 0.45, delay: 0.05 }}
         >
           <h3 className="experience-col__title">
-            <Briefcase size={14} /> experience
+            <Briefcase size={14} /> Experience
           </h3>
           {EXPERIENCE.map((exp) => (
             <div className="timeline-item" key={exp.role + exp.company}>
@@ -59,7 +59,7 @@ export function Experience() {
           transition={{ duration: 0.45, delay: 0.12 }}
         >
           <h3 className="experience-col__title">
-            <GraduationCap size={14} /> education
+            <GraduationCap size={14} /> Education
           </h3>
           {EDUCATION.map((edu) => (
             <div className="panel experience-item" key={edu.school}>
@@ -73,7 +73,7 @@ export function Experience() {
           ))}
 
           <h3 className="experience-col__title experience-col__title--spaced">
-            <LanguagesIcon size={14} /> languages
+            <LanguagesIcon size={14} /> Languages
           </h3>
           <div className="languages-list">
             {LANGUAGES.map((lang) => (

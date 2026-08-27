@@ -88,7 +88,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
-    title: 'Front-End',
+    title: 'Frontend',
     items: [
       { name: 'React.js', icon: Atom },
       { name: 'Redux', icon: Share2 },
@@ -96,7 +96,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
-    title: 'Back-End',
+    title: 'BackEnd',
     items: [
       { name: 'Node.js', icon: Server },
       { name: 'Express.js', icon: Workflow },

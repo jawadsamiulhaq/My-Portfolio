@@ -24,7 +24,7 @@ export function Skills() {
             viewport={{ once: true, margin: '-10% 0px' }}
             transition={{ duration: 0.4, delay: catIndex * 0.08 }}
           >
-            <h3 className="skill-card__title">{category.title.toLowerCase()}</h3>
+            <h3 className="skill-card__title">{category.title}</h3>
             <div className="skill-card__items">
               {category.items.map(({ name, icon: Icon }) => (
                 <span className="chip" key={name}>
