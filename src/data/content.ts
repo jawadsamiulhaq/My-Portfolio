@@ -226,7 +226,7 @@ export const PROFILE = {
   name: 'Jawad Sami Ul Haq',
   firstName: 'Jawad',
   lastName: 'Sami Ul Haq',
-  email: 'jawad786sami@gmail.com',
+  email: 'jawadsamiulhaq.code@gmail.com',
   phone: 'Not Available',
   location: 'Punjab, Pakistan',
   freelance: 'Available',
