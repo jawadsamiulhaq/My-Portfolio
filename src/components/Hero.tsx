@@ -51,7 +51,7 @@ export function Hero() {
             <RotatingRole />
           </p>
           <p className="hero-desc">
-            Professional experience in C#, ASP.NET Core and SQL Server, with React from personal and
+            Working experience in C#, ASP.NET Core and SQL Server, with React from personal and
             freelance work — focused on applications that scale, perform and stay maintainable.
           </p>
           <div className="hero-buttons">
