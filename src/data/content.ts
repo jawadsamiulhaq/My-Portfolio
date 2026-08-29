@@ -47,7 +47,7 @@ export interface SocialLink {
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: 'GitHub', href: 'https://github.com/jawadsamiulhaq', icon: GithubIcon },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jawad-sami-ul-haq-ab2a44217/', icon: LinkedinIcon },
-  { label: 'Email', href: 'mailto:jawad786sami@gmail.com', icon: Mail },
+  { label: 'Email', href: 'mailto:jawadsamiulhaq.code@gmail.com', icon: Mail },
 ];
 
 export const ROLES = ['Software Engineer', 'Problem Solver'];
