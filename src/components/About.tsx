@@ -22,7 +22,7 @@ export function About() {
           <h2 className="section-title">A little about my approach.</h2>
           <p className="about-bio">{PROFILE.bio}</p>
           <div className="cv-buttons">
-            <a href="/Jawad-Sami-Ul-Haq-CV.pdf" download className="btn-cv" title="Download CV">
+            <a href="/Jawad-Sami-Ul-Haq-CV.pdf" download className="btn-primary" title="Download CV">
               Download CV
               <ArrowDown size={15} />
             </a>
@@ -30,10 +30,10 @@ export function About() {
               href="/Jawad-Sami-Ul-Haq-CV.pdf"
               target="_blank"
               rel="noreferrer"
-              className="btn-cv btn-cv--ghost"
+              className="btn-secondary"
               title="Preview CV"
             >
-              Preview
+              Preview CV
               <Eye size={15} />
             </a>
           </div>
