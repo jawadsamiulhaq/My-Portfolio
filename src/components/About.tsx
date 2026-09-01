@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Mail, MapPin, Briefcase, User } from 'lucide-react';
+import { ArrowDown, Eye, Mail, MapPin, Briefcase, User } from 'lucide-react';
 import { PROFILE } from '../data/content';
 
 const INFO_ROWS = [
@@ -21,11 +21,10 @@ export function About() {
         >
           <h2 className="section-title">A little about my approach.</h2>
           <p className="about-bio">{PROFILE.bio}</p>
-          <button type="button" className="btn-cv" disabled title="Resume coming soon">
+          <a href="/Jawad-Sami-Ul-Haq-CV.pdf" download className="btn-cv" title="Download CV">
             Download CV
             <ArrowDown size={15} />
-            <span className="btn-cv__badge">Soon</span>
-          </button>
+          </a>
         </motion.div>
 
         <motion.div
