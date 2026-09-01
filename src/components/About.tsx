@@ -21,10 +21,22 @@ export function About() {
         >
           <h2 className="section-title">A little about my approach.</h2>
           <p className="about-bio">{PROFILE.bio}</p>
-          <a href="/Jawad-Sami-Ul-Haq-CV.pdf" download className="btn-cv" title="Download CV">
-            Download CV
-            <ArrowDown size={15} />
-          </a>
+          <div className="cv-buttons">
+            <a href="/Jawad-Sami-Ul-Haq-CV.pdf" download className="btn-cv" title="Download CV">
+              Download CV
+              <ArrowDown size={15} />
+            </a>
+            <a
+              href="/Jawad-Sami-Ul-Haq-CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-cv btn-cv--ghost"
+              title="Preview CV"
+            >
+              Preview
+              <Eye size={15} />
+            </a>
+          </div>
         </motion.div>
 
         <motion.div

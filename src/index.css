@@ -566,6 +566,22 @@ h1, h2, h3 {
     color: var(--accent);
 }
 
+.cv-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+
+.btn-cv--ghost {
+    border-color: transparent;
+    color: var(--text-secondary);
+}
+
+.btn-cv--ghost:hover {
+    border-color: var(--border);
+    color: var(--accent);
+}
+
 .about-info-card {
     padding: var(--space-5) var(--space-6);
 }
