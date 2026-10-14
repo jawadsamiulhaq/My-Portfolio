@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, Moon, Sun, X } from 'lucide-react';
 import { NAV_LINKS } from '../data/content';
 import { useActiveSection } from '../hooks/useActiveSection';
+import { useTheme } from '../hooks/useTheme';
 
 const SECTION_IDS = NAV_LINKS.map((link) => link.id);
 
@@ -14,6 +15,7 @@ export function Navbar() {
   const activeId = useActiveSection(SECTION_IDS);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     function onScroll() {
@@ -66,6 +68,14 @@ export function Navbar() {
         <div className="navbar__actions">
           <button type="button" className="btn-nav-cta" onClick={() => handleNavClick('contact')}>
             Let's talk
+          </button>
+          <button
+            type="button"
+            className="theme-toggle"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            onClick={toggleTheme}
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <button
             type="button"

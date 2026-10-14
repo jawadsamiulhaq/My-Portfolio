@@ -4,8 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Jawad Sami — Software Engineer building clean, reliable web products with .NET, React and modern tooling." />
-    <meta name="theme-color" content="#050509" />
+    <meta name="theme-color" content="#0d0d12" />
+    <meta name="color-scheme" content="dark light" />
     <meta name="robots" content="index, follow" />
+    <script>
+      // Resolve the theme before first paint so there is no flash of the wrong one.
+      (function () {
+        var theme;
+        try { theme = localStorage.getItem('theme'); } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.dataset.theme = theme;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', theme === 'light' ? '#f3f2f6' : '#0d0d12');
+      })();
+    </script>
     <meta name="author" content="Jawad Sami Ul Haq" />
     <meta name="google-site-verification" content="zYJXSrT09ZEwk7Tcvv6IbtyMa28CFcYeyMmHDCf5TFE" />
     <link rel="canonical" href="https://jawadsamiulhaq.vercel.app/" />
